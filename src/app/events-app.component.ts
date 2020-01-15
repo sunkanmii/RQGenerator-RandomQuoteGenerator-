@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
-@Component({
-  selector: 'events-root',
+@Component ({
+  selector: 'app-events-root',
   template: '<events-list></events-list>'
+
 })
 
 export class EventsAppComponent {

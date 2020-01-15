@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { EventsAppComponent } from './events-app.component';
 import { EventsListComponent } from './events/events-list.component';
 import { EventsThumbnailComponent } from './events/events-thumbnail.component';
+import { NavAppComponent } from './nav/nav-app.component';
 
 @NgModule({
   imports: [
@@ -13,8 +14,12 @@ import { EventsThumbnailComponent } from './events/events-thumbnail.component';
   declarations: [
     EventsAppComponent,
     EventsListComponent,
-    EventsThumbnailComponent
+    EventsThumbnailComponent,
+    NavAppComponent,
   ],
   bootstrap: [EventsAppComponent]
 })
-export class AppModule {  }
+
+export class AppModule { 
+
+}
