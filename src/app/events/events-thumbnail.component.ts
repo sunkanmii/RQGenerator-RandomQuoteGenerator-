@@ -9,14 +9,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
                 ? - Safe navigation operator.
                 In order to avoid runtime hidden bugs.
             -->
+            <!-- interpolation -->  
             <div>{{event?.name}}</div>
             <div>Date: {{event?.date}}</div>
             <!-- ngSwitch can be of any data type -->
-            <div [ngClass]="getStartTimeClass()"
+            <div [ngStyle]="getStartTimeStyle()"
             [ngSwitch]="event?.time">
                 Time: {{event?.time}}
-                <span *ngSwitchCase="'8:00am'" >Early Start</span>
-                <span *ngSwitchCase="'10:00am'">Late Start</span>
+                <span *ngSwitchCase="'8:00 am'" >Early Start</span>
+                <span *ngSwitchCase="'10:00 am'">Late Start</span>
                 <span *ngSwitchDefault >Normal Start</span>
             </div>
             <div>Price: \${{event?.price}}</div>
@@ -71,9 +72,9 @@ export class EventsThumbnailComponent {
 
     }
 
-    getStartTimeClass(): any{
-        if(this.event && this.event.time === '8:00am')
-            return ['green', 'bold'];
+    getStartTimeStyle():any {
+        if(this.event && this.event.time === '8:00 am')
+            return {color: 'green', 'font-weight': 'bold'};
         return {};
     }
 }
